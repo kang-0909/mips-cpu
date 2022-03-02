@@ -1,5 +1,8 @@
 # mips-cpu
- 
+
+支持指令：lw, sw, beq, bne, addi, add, sub, and, or, slt, j, addi, ori, andi
+`\framework` 为一个支持 lw, sw, beq, bne, addi, add, sub, and, or, slt 的框架，只需要当做填空题补全等号后面的内容即可。
+
 众所周知，MIPS体系的五级流水线CPU分为五个阶段：取指（IF）、译码（ID）、执行（EX）、存储器（MEM）、写回（WB）。所以这根本算不上“设计”，基本上就是把这个图翻译一遍：
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/cc83a6b26a484e24b09192079fc30fad.png#pic_center)
 可以发现节点数比较多，为了减少出错（对自己静态调试能力较为自信.jpg），那么程序的框架就显得非常重要了。
