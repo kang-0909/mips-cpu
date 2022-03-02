@@ -4,11 +4,11 @@ module Top(input logic clk_pre, reset,
 
 integer cnt_peri = 0, cnt_disp = 0;
 logic CLK = 0;
-//assign CLK = clk_pre;
+
 always_ff @ (posedge clk_pre) begin
    cnt_peri <= cnt_peri + 1;
    cnt_disp <= cnt_disp + 1;
-   if (cnt_peri == 500000) begin
+   if (cnt_peri == 500000) begin // change 500000 to 1 for simulations
        cnt_peri <= 0;
        CLK <= CLK ^ 1;
 	end
