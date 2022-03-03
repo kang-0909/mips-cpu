@@ -5,7 +5,7 @@ Top dut(CLK, reset);
 
 initial begin
     reset = 1;
-    #10;
+    #20;
     reset = 0;
     #10;
 end
